@@ -1,4 +1,4 @@
-FROM fnphat/alpine-java:1.7.0
+FROM fnphat/alpine-java:1.8.0
 
 # Install prerequisites
 RUN apk update && \
