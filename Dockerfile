@@ -7,10 +7,8 @@ RUN apk update && \
 
 # Install openHAB
 RUN wget -O /tmp/runtime.zip https://bintray.com/artifact/download/openhab/bin/distribution-1.8.1-runtime.zip && \
-    wget -O /tmp/addons.zip https://bintray.com/artifact/download/openhab/bin/distribution-1.8.1-addons.zip && \
     mkdir /openhab && \
     unzip /tmp/runtime.zip -d /openhab && \
-    unzip /tmp/addons.zip org.openhab.action.mios-1.8.1.jar -d /openhab/addons && \
-    rm /tmp/runtime.zip /tmp/addons.zip
+    rm /tmp/runtime.zip
 
 ENTRYPOINT bash
